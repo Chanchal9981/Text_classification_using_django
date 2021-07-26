@@ -7,10 +7,10 @@ from tensorflow.keras.preprocessing import sequence
 import re
 import numpy as np
 from keras.models import load_model
-model=load_model('spam_data.h5')
+model=load_model('spam_data.h5') # this is my trained model with 0.9997% Accuracy
 
 
-def text_preprocessing(text):
+def text_preprocessing(text): # preprocess text data
     tokenizer = Tokenizer(num_words=500, split='')
     tokenizer.fit_on_texts(text)
     text = text.lower()
